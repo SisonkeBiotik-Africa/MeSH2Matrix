@@ -2,7 +2,7 @@
 A set of Python codes for the generation of biomedical ontologies from the MeSH keywords of the PubMed scholarly publications
 
 # Description of Output Files
-  - output/rellist: list of relations (size of 81k)
+  - output/rellist.tsv: list of relations (size of 81k)
   - output/sample.txt: Set of MeSH qualifiers Associations extracted from PubMed
   - output/label_encoded.csv: Encoding for the 195 unique labels
 
