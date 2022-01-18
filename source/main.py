@@ -50,7 +50,7 @@ def get_learning_dataset(is_downloaded=False):
 
 def main(args):
     SAVE_FILES=False
-    community='africanlp'
+   
     try:
         opts, args = getopt.getopt(args,'sd',["save","downloaded"])
     except getopt.GetoptError as e:
