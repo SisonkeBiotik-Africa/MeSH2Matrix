@@ -14,3 +14,6 @@ A set of Python codes for the generation of biomedical ontologies from the MeSH 
       - Unique Labels: 195
       - Labels Set Shape: (46469,)
   - source/main.py: Download our existing data set and return a tuple of arrays: (train_data, train_labels), (dev_data, dev_labels) and (test_data, test_labels)
+    -  Train Set: (33457, 89, 89)
+    -  Dev Set: (13012, 89, 89)
+    -  Test Set: (9294, 89, 89)
