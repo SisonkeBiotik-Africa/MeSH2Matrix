@@ -6,6 +6,7 @@
 import gdown
 import numpy as np
 import os
+import sys, getopt
 np.random.seed(1234)
 
 
@@ -47,8 +48,25 @@ def get_learning_dataset(is_downloaded=False):
 
     return (real_training, real_training_labels), (dev_data, dev_labels), (testing_data, testing_labels)
 
+def main(args):
+    SAVE_FILES=False
+    community='africanlp'
+    try:
+        opts, args = getopt.getopt(args,'sd',["save","downloaded"])
+    except getopt.GetoptError as e:
+        ABOUT = """
+        python main.py
+        Use: `--save` or `-s` to save the train, dev and test numpy files
+             `--downloaded or `-d` if the files have already been downloaded   
+        """
+        print(ABOUT)
+        sys.exit(2)
 
-if __name__ == '__main__':
+    for opt, arg in opts:
+        opt=opt.strip()
+        if opt in ['--save','-s']:
+            SAVE_FILES=True
+            
     data_file = '../output/data.npy'
     labels_file = '../output/labels.npy'
 
@@ -60,3 +78,19 @@ if __name__ == '__main__':
     train_set_data, train_set_label = train[0], train[1]
     dev_set_data, dev_set_label = dev[0], dev[1]
     test_set_data, test_set_label = test[0], test[1]
+    
+    if SAVE_FILES:
+        #Save the train, test and dev numpy files
+        np.save('../output/train.npy',train_set_data,allow_pickle=True)
+        np.save('../output/train_labels.npy',train_set_label,allow_pickle=True)
+        np.save('../output/dev.npy',dev_set_data,allow_pickle=True)
+        np.save('../output/dev_labels.npy',dev_set_label,allow_pickle=True)
+        np.save('../output/test.npy',test_set_data,allow_pickle=True)
+        np.save('../output/test_labels.npy',test_set_label,allow_pickle=True)
+        print('All Files Saved Successfully!')
+                
+      
+
+if __name__ == '__main__':
+    main(sys.argv[1:])
+    
