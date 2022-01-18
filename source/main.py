@@ -88,8 +88,6 @@ def main(args):
         np.save('../output/test.npy',test_set_data,allow_pickle=True)
         np.save('../output/test_labels.npy',test_set_label,allow_pickle=True)
         print('All Files Saved Successfully!')
-                
-      
 
 if __name__ == '__main__':
     main(sys.argv[1:])
