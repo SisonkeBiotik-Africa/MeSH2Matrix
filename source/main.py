@@ -56,7 +56,7 @@ def main(args):
     except getopt.GetoptError as e:
         ABOUT = """
         python main.py
-        Use: `--save` or `-s` to save the train, dev and test numpy files
+        Add: `--save` or `-s` to save the train, dev and test numpy files
              `--downloaded or `-d` if the files have already been downloaded   
         """
         print(ABOUT)
