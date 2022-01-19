@@ -36,19 +36,23 @@ nonbiomedical_nonsymmetric = ["P1001", "P10019", "P101", "P1013", "P1034", "P105
 # nonsymmetric = biomedical_nonsymmetric + nonbiomedical_nonsymmetric
 # nontaxonomic = biomedical_symmetric + nonbiomedical_symmetric + biomedical_nonsymmetric + nonbiomedical_nonsymmetric
 
-all_first_level_classes = [biomedical_symmetric, taxonomic, nonbiomedical_symmetric, taxonomic,
+all_first_level_classes = [taxonomic, biomedical_symmetric, nonbiomedical_symmetric, biomedical_nonsymmetric,
                            nonbiomedical_nonsymmetric]
+
 encoding = pd.read_csv('../output/label_encoded.csv')
 labels, encoded_value = encoding.label.tolist(), encoding.encoding.tolist()
 
 second_level_dict = {key: value - 1 for key, value in zip(labels, encoded_value)}
 new_first_level = []
-for first_level in all_first_level_classes:
-    first_level_ = [second_level_dict[element] for element in first_level if element in list(second_level_dict.keys())]
+for first_level in range(len(all_first_level_classes)):
+    # make sure each class has distinct elements
+    B = [all_first_level_classes[i] for i in range(len(all_first_level_classes)) if i != first_level]
+    B = set([label for group in B for label in group])
+    A = list(set(all_first_level_classes[first_level]).difference(B))
+    first_level_ = [second_level_dict[element] for element in A if element in list(second_level_dict.keys())]
     new_first_level.append(first_level_)
 
 first_level_dict = {index: list_values for index, list_values in enumerate(new_first_level)}
-
 json_object = json.dumps(first_level_dict)
 
 with open("../output/first_level.json", "w") as outfile:
