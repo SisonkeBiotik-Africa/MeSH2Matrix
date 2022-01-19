@@ -30,13 +30,14 @@ nonbiomedical_nonsymmetric = ["P1001", "P10019", "P101", "P1013", "P1034", "P105
                               "P9072", "P910", "P921", "P928", "P9353", "P937", "P9977"]
 
 # first-level metaclass
-biomedical = biomedical_symmetric + biomedical_nonsymmetric
-nonbiomedical = taxonomic + nonbiomedical_symmetric + nonbiomedical_nonsymmetric
-symmetric = biomedical_symmetric + nonbiomedical_symmetric
-nonsymmetric = biomedical_nonsymmetric + nonbiomedical_nonsymmetric
-nontaxonomic = biomedical_symmetric + nonbiomedical_symmetric + biomedical_nonsymmetric + nonbiomedical_nonsymmetric
+# biomedical = biomedical_symmetric + biomedical_nonsymmetric
+# nonbiomedical = taxonomic + nonbiomedical_symmetric + nonbiomedical_nonsymmetric
+# symmetric = biomedical_symmetric + nonbiomedical_symmetric
+# nonsymmetric = biomedical_nonsymmetric + nonbiomedical_nonsymmetric
+# nontaxonomic = biomedical_symmetric + nonbiomedical_symmetric + biomedical_nonsymmetric + nonbiomedical_nonsymmetric
 
-all_first_level_classes = [biomedical, nonbiomedical, symmetric, nonsymmetric, nontaxonomic]
+all_first_level_classes = [biomedical_symmetric, taxonomic, nonbiomedical_symmetric, taxonomic,
+                           nonbiomedical_nonsymmetric]
 encoding = pd.read_csv('../output/label_encoded.csv')
 labels, encoded_value = encoding.label.tolist(), encoding.encoding.tolist()
 
@@ -50,6 +51,5 @@ first_level_dict = {index: list_values for index, list_values in enumerate(new_f
 
 json_object = json.dumps(first_level_dict)
 
-# Writing to sample.json
 with open("../output/first_level.json", "w") as outfile:
     outfile.write(json_object)
