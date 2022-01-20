@@ -3,3 +3,10 @@ gdown>=4.2.0
 numpy
 pandas
 json
+scikit-learn
+torch
+livelossplot
+matplotlib
+pandas
+torchtext
+
