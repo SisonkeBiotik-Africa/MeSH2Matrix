@@ -14,7 +14,13 @@ A set of Python codes for the generation of biomedical ontologies from the MeSH 
       - Unique Labels: 195
       - Labels Set Shape: (46469,)
   - source/main.py: Download our existing data set and return a tuple of arrays: (train_data, train_labels), (dev_data, dev_labels) and (test_data, test_labels)
-    > Add: `--save` or `-s` to save the train, dev and test numpy files | `--downloaded` or `-d` if the files have already been downloaded.
     -  Train Set: (33457, 89, 89)
     -  Dev Set: (13012, 89, 89)
     -  Test Set: (9294, 89, 89)
+        - All files are file are automatically downloaded if they not not exist already
+        - The grouped labels are obtained mergin all first-level relations types to second-level relations. They are also automatically downloaded
+    
+# Description of Model Files
+  - models/NeuralNets/*: contains training and validation source code for deep learning models (Fully Connected, CNNs). Both models are trained with 195 classes and 5 grouped classes
+  - models/TradiMlModels: Traditional ML models like SVM.
+  - models/get_pretrained_weights.py: Download pretrained weights of neural nets
