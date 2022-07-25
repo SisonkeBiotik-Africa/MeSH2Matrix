@@ -1,6 +1,10 @@
 # MeSH2Matrix
 A set of Python codes for the classification of biomedical relations based on the MeSH keywords of PubMed scholarly publications
 
+**To cite the work**:
+* 
+* 
+
 # Description of Output Files
   - output/rellist.tsv: list of relations (size of 81k)
   - output/sample.txt: Set of MeSH qualifiers Associations extracted from PubMed
