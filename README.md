@@ -1,5 +1,5 @@
 # MeSH2Matrix
-A set of Python codes for the generation of biomedical ontologies from the MeSH keywords of the PubMed scholarly publications
+A set of Python codes for the classification of biomedical relations based on the MeSH keywords of PubMed scholarly publications
 
 # Description of Output Files
   - output/rellist.tsv: list of relations (size of 81k)
