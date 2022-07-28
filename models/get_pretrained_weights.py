@@ -21,5 +21,5 @@ if __name__ == '__main__':
 
     download_weights('fc', fc_195_link, 195)
     download_weights('fc', fc_5_link, 5)
-    download_weights('cnn_195', cnn_195, 195)
-    download_weights('cnn_5', cnn_5, 5)
+    download_weights('cnn', cnn_195, 195)
+    download_weights('cnn', cnn_5, 5)
