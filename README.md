@@ -25,6 +25,11 @@ A set of Python codes for the classification of biomedical relations based on th
         - The grouped labels are obtained mergin all first-level relations types to second-level relations. They are also automatically downloaded
     
 # Description of Model Files
-  - models/NeuralNets/*: contains training and validation source code for deep learning models (Fully Connected, CNNs). Both models are trained with 195 classes and 5 grouped classes
+  - models/NeuralNets/*: contains training and validation source code for the D-Modeel in our work (a Fully Connected Nueral Network). Both models are trained with 195 classes and 5 grouped classes
+  - models/ConvNets/*: contains training and validation source code for the C-Net model in our work ( a convolutional neural network). Both models are trained with 195 classes and 5 grouped classes.
   - models/TradiMlModels: Traditional ML models like SVM.
-  - models/get_pretrained_weights.py: Download pretrained weights of neural nets
+  - models/get_pretrained_weights.py: Download pretrained weights of neural nets.
+  ## Computing  the Intergeted Gradients used for this work.
+    All the codes use to compute the Integrated Gradients for feature analysis are in the evaluation section of each model's code.
+    Note that training and evaluation for the C-Net moodel was done in the same notebook.
+    Also, we only did extensive feature analysis for the 5 grouped-classes.
