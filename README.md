@@ -30,6 +30,6 @@ A set of Python codes for the classification of biomedical relations based on th
   - models/TradiMlModels: Traditional ML models like SVM.
   - models/get_pretrained_weights.py: Download pretrained weights of neural nets.
   ## Computing  the Intergeted Gradients used for this work.
-    All the codes use to compute the Integrated Gradients for feature analysis are </br> in the evaluation section of each model's code.
-    Note that training and evaluation for the C-Net moodel was done in the same notebook.
-    Also, we only did extensive feature analysis for the 5 grouped-classes.
+  - All the codes use to compute the Integrated Gradients for feature analysis are in the evaluation section of each model's code.
+  - Note that training and evaluation for the C-Net moodel was done in the same notebook.
+  - Also, we only did extensive feature analysis for the 5 grouped-classes.
