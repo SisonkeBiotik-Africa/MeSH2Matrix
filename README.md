@@ -3,7 +3,7 @@ A set of Python codes for the classification of biomedical relations based on th
 
 **To cite the work**:
 * Turki, H., Dossou, B. F. P., Emezue, C. C., Hadj Taieb, M. A., Ben Aouicha, M., Ben Aouicha, M., Ben Hassen, H., & Masmoudi, A. (2022). MeSH2Matrix: Machine learning-driven biomedical relation classification based on the MeSH keywords of PubMed scholarly publications. In *Proceedings of the 12th International Workshop on Bibliometric-enhanced Information Retrieval co-located with 44th European Conference on Information Retrieval*.
-* Turki, H., Dossou, B. F. P., Emezue, C. C., Owodunni, A., Hadj Taieb, M. A., Ben Aouicha, M., Ben Aouicha, M., Ben Hassen, H., & Masmoudi, A. (2023). MeSH2Matrix: Combining MeSH keywords and machine learning for biomedical relation classification based on PubMed. *Scientometrics* (Forthcoming).
+* Turki, H., Dossou, B. F. P., Emezue, C. C., Owodunni, A., Hadj Taieb, M. A., Ben Aouicha, M., Ben Aouicha, M., Ben Hassen, H., & Masmoudi, A. (2023). MeSH2Matrix: Combining MeSH keywords and machine learning for biomedical relation classification based on PubMed. *Scientific Reports* (Forthcoming).
 
 # Description of Output Files
   - output/rellist.tsv: list of relations (size of 81k)
