@@ -1,6 +1,7 @@
 # MeSH2Matrix
 A set of Python codes for the classification of biomedical relations based on the MeSH keywords of PubMed scholarly publications
-[![Try In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SisonkeBiotik-Africa/MeSH2Matrix/blob/main/MeSH2Matrix_Demo.ipynb)
+
+Demo: [![Try In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SisonkeBiotik-Africa/MeSH2Matrix/blob/main/MeSH2Matrix_Demo.ipynb)
 
 **To cite the work**:
 * Turki, H., Dossou, B. F. P., Emezue, C. C., Hadj Taieb, M. A., Ben Aouicha, M., Ben Aouicha, M., Ben Hassen, H., & Masmoudi, A. (2022). MeSH2Matrix: Machine learning-driven biomedical relation classification based on the MeSH keywords of PubMed scholarly publications. In *Proceedings of the 12th International Workshop on Bibliometric-enhanced Information Retrieval co-located with 44th European Conference on Information Retrieval*.
